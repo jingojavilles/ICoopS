@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Create Client{% endblock %}
+
+{% block breadcrumb %}
+  <li class="breadcrumb-item"><a href="{% url 'home' %}">Client</a></li>
+{#  <li class="breadcrumb-item"><a href="{% url 'view_client' client.pk %}">{{ client.lname }}</a></li>#}
+  <li class="breadcrumb-item active">New Client</li>
+{% endblock %}
+
+{% block content %}
+ <form method="post" novalidate>
+    {% csrf_token %}
+    {% include 'includes/form.html' %}
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+{% endblock %}

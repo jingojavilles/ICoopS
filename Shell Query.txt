@@ -1,0 +1,3 @@
+client=Client(acctid='112233', fname='Jingo', lname='Javilles', address='Quezon Blvd., D.C.', contactnum='09218187503', branch=Branch.objects.get(branchcode='00'))
+
+client = Client.objects.create(acctid='223344', fname='JJ', lname='Estrelles', address='Woordridge Sub., D.C.', contactnum='09218187503', branch=Branch.objects.get(branchcode='01'))
